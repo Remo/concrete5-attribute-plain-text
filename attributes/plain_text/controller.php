@@ -15,7 +15,7 @@ class Controller extends AttributeTypeController
      * Returns the value entered in the HTML editor
      * @return string
      */
-    protected function getValue()
+    public function getValue()
     {
         $db = Database::get();
         $ak = $this->getAttributeKey();
