@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema version="0.3">
+    <table name="atPlainText">
+        <field name="akID" type="I">
+            <key/>
+            <default value="0"/>
+        </field>
+        <field name="value" type="X2"></field>
+    </table>
+</schema>
