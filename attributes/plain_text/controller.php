@@ -17,8 +17,8 @@ class Controller extends AttributeTypeController
     public function deleteKey()
     {
         $db = Database::get();
-        $db->delete('atPlainText', ['akID', $this->getAttributeKey()->getAttributeKeyID()]);
-        $db->delete('atTextareaSettings', ['akID', $this->getAttributeKey()->getAttributeKeyID()]);
+        $db->delete('atPlainText', ['akID' => $this->getAttributeKey()->getAttributeKeyID()]);
+        $db->delete('atTextareaSettings', ['akID' => $this->getAttributeKey()->getAttributeKeyID()]);
     }
     
     /**
