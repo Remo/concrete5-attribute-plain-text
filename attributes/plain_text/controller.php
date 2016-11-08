@@ -10,6 +10,26 @@ class Controller extends AttributeTypeController
 {
 
     public $helpers = ['form'];
+    
+    /**
+     * Deletes the corresponding entries in the atPlainText and atTextareaSettings tables.
+     */
+    public function deleteKey()
+    {
+        $db = Database::get();
+        $db->delete('atPlainText', ['akID' => $this->getAttributeKey()->getAttributeKeyID()]);
+        $db->delete('atTextareaSettings', ['akID' => $this->getAttributeKey()->getAttributeKeyID()]);
+    }
+    
+    /**
+     * Dummy method called when the attribute values of a prticular formtype are deleted.
+     */
+    public function deleteValue()
+    {
+        // this is not a common attribute.
+        // Every form with a particular formtype uses the same value.
+        // Therefore the value is only stored in the atPlainText table, the avID-entris in the AtttributeValues are just dummies
+    }
 
     /**
      * Returns the value entered in the HTML editor
